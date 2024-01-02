@@ -1,0 +1,200 @@
+@font-face {
+    font-family: "Regular";
+    src: url(./Assets/Fonts/64d3dd9edfb41666c35b15c0_NeueHaasDisplay-Roman.ttf);
+}
+
+@font-face {
+    font-family: "Medium";
+    src: url(./Assets/Fonts/64d3dd9edfb41666c35b15bf_NeueHaasDisplay-Mediu.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Regular", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --primary-color: #0b0500;
+    --secondary-color: #fe330a;
+    --background-color: #efeae3;
+    --border-color: #d9d3cd;
+}
+
+#page1 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    position: relative;
+    padding: 0 3vw;
+}
+
+nav {
+    width: 100%;
+    padding: 2vw 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+
+}
+
+.nav-links h4{
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.429);
+    font-weight: 100;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links h4::after{
+    content: "";
+    background-color: black;
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    
+}
+
+.nav-links h4:hover::after{
+    bottom: 0;
+    transition: 0.5s;
+    border-radius: 0;
+}
+
+.nav-links h4 a{
+    color: rgba(0, 0, 0, 0.893);
+    text-decoration: none;
+}
+
+.nav-links h4:hover a{
+    color: white;
+    z-index: 99;
+    position: relative;
+}
+
+.center{
+    width: 100%;
+    height: 77vh;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 4vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.left h3{
+    font-size: 1.8vw;
+    width: 60%;
+    line-height: 1.8vw;
+}
+
+.right h1{
+    font-size: 10vw;
+    line-height: .9;
+    font-family: "Medium", sans-serif;
+    text-align: right;
+}
+
+.hero-shape{
+    width: 46vw;
+    height: 36vw;
+    
+    position: absolute;
+    right: 0;
+    top: 77vh;
+    filter: blur(20px);
+}
+
+#hero1{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-color: var(--secondary-color);
+
+    position: absolute;
+
+    
+}
+
+#hero2{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background:linear-gradient(var(--secondary-color),#fe330a98) ;
+
+    position: absolute;
+
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+
+}
+
+#hero3{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background:linear-gradient(var(--secondary-color),#fe330a98) ;
+    filter: blur(10px);
+
+    position: absolute;
+
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(55%,-3%)
+    }
+    to{
+        transform: translate(0%,10%)
+    }
+}
+
+@keyframes anime2 {
+    from{
+        transform: translate(5%,-5%)
+    }
+    to{
+        transform: translate(-10%,40%)
+    }
+}
+
+#page1 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1vw;
+    margin-top: 4vw;
+    position: relative;
+}
+
