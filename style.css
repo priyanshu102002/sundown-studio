@@ -49,10 +49,9 @@ nav {
     display: flex;
     align-items: center;
     gap: 1vw;
-
 }
 
-.nav-links h4{
+.nav-links h4 {
     font-size: 16px;
     padding: 12px 24px;
     border-radius: 50px;
@@ -63,7 +62,7 @@ nav {
     overflow: hidden;
 }
 
-.nav-links h4::after{
+.nav-links h4::after {
     content: "";
     background-color: black;
     height: 100%;
@@ -73,27 +72,26 @@ nav {
     left: 0;
     bottom: -100%;
     border-radius: 50%;
-    
 }
 
-.nav-links h4:hover::after{
+.nav-links h4:hover::after {
     bottom: 0;
     transition: 0.5s;
     border-radius: 0;
 }
 
-.nav-links h4 a{
+.nav-links h4 a {
     color: rgba(0, 0, 0, 0.893);
     text-decoration: none;
 }
 
-.nav-links h4:hover a{
+.nav-links h4:hover a {
     color: white;
     z-index: 99;
     position: relative;
 }
 
-.center{
+.center {
     width: 100%;
     height: 77vh;
     border-bottom: 1px solid var(--border-color);
@@ -104,30 +102,30 @@ nav {
     align-items: flex-end;
 }
 
-.left h3{
+.left h3 {
     font-size: 1.8vw;
     width: 60%;
     line-height: 1.8vw;
 }
 
-.right h1{
+.right h1 {
     font-size: 10vw;
-    line-height: .9;
+    line-height: 0.9;
     font-family: "Medium", sans-serif;
     text-align: right;
 }
 
-.hero-shape{
+.hero-shape {
     width: 46vw;
     height: 36vw;
-    
+
     position: absolute;
     right: 0;
     top: 77vh;
     filter: blur(20px);
 }
 
-#hero1{
+#hero1 {
     width: 100%;
     height: 100%;
     border-top-left-radius: 50%;
@@ -135,15 +133,13 @@ nav {
     background-color: var(--secondary-color);
 
     position: absolute;
-
-    
 }
 
-#hero2{
+#hero2 {
     width: 30vw;
     height: 30vw;
     border-radius: 50%;
-    background:linear-gradient(var(--secondary-color),#fe330a98) ;
+    background: linear-gradient(var(--secondary-color), #fe330a98);
 
     position: absolute;
 
@@ -152,14 +148,13 @@ nav {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
-
 }
 
-#hero3{
+#hero3 {
     width: 30vw;
     height: 30vw;
     border-radius: 50%;
-    background:linear-gradient(var(--secondary-color),#fe330a98) ;
+    background: linear-gradient(var(--secondary-color), #fe330a98);
     filter: blur(10px);
 
     position: absolute;
@@ -172,24 +167,24 @@ nav {
 }
 
 @keyframes anime1 {
-    from{
-        transform: translate(55%,-3%)
+    from {
+        transform: translate(55%, -3%);
     }
-    to{
-        transform: translate(0%,10%)
+    to {
+        transform: translate(0%, 10%);
     }
 }
 
 @keyframes anime2 {
-    from{
-        transform: translate(5%,-5%)
+    from {
+        transform: translate(5%, -5%);
     }
-    to{
-        transform: translate(-10%,40%)
+    to {
+        transform: translate(-10%, 40%);
     }
 }
 
-#page1 video{
+#page1 video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -198,3 +193,135 @@ nav {
     position: relative;
 }
 
+/* Page-2 */
+
+#page2 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    padding: 8vw 0;
+    position: relative;
+}
+
+#circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    margin: 0 1vw;
+}
+
+.moving-text {
+    display: flex;
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+
+    animation-name: move;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.container h1 {
+    font-size: 9vw;
+    text-transform: uppercase;
+    font-family: "Medium", sans-serif;
+}
+
+@keyframes move {
+    /* initial */
+    from {
+        transform: translateX(0);
+    }
+    /* final */
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.page2-bottom {
+    height: 80vh;
+    width: 100%;
+    padding: 4.5vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 9;
+}
+
+.page2-bottom h2 {
+    font-size: 4vw;
+    line-height: 4vw;
+    font-family: "Medium", sans-serif;
+    width: 60%;
+}
+
+.bottom-box {
+    width: 20%;
+}
+
+.bottom-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1vw;
+}
+
+.bottom-box p {
+    font-size: 1.1vw;
+    font-weight: 100;
+    margin-top: 3vw;
+}
+
+.page2-shape {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background: linear-gradient(to top, var(--secondary-color), #fe670a);
+    position: absolute;
+    top: 58%;
+    left: 25%;
+
+    filter: blur(20px);
+
+    animation-name: anime3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes anime3 {
+    from{
+        transform: translate(10%,-10%) skew(0);
+    }
+    to{
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+}
+
+/* page3 */
+
+#page3 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    padding: 8vw 0;
+    position: relative;
+    z-index: -1;
+}
