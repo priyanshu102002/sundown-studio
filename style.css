@@ -28,6 +28,27 @@ body {
     --border-color: #d9d3cd;
 }
 
+#fixed-image{
+    width: 24vw;
+    height: 30vw;
+    border-radius: 10px;
+    background-color: transparent;
+    z-index: 999;
+
+    position: fixed;
+    top: 23%;
+    left: 50%;
+
+    background-position: center;
+    background-size: cover;
+
+    display: none;
+}
+
+#fixed-image::selection{
+    user-select: none;
+}
+
 #page1 {
     width: 100%;
     min-height: 100vh;
@@ -322,6 +343,60 @@ nav {
     min-height: 100vh;
     background-color: var(--background-color);
     padding: 8vw 0;
-    position: relative;
     z-index: -1;
+}
+
+.elem{
+    width: 100%;
+    height: 150px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    
+    padding: 0 2vw;
+    overflow: hidden;
+}
+
+.elem h2{
+    font-size: 4vw;
+    font-family: "Medium", sans-serif;
+    width: 60%;
+    position: relative;
+    z-index: 99;
+}
+
+.elem .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #FF9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: 0.5s;
+}
+
+.elem:hover .overlay{
+    top: 0;
+    transition: 0.5s;
+}
+
+.elem img{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    z-index: 999;
+    transition: all 0.5s ease-in-out;
+}
+
+.elem:hover img{
+    opacity: 1;
+    transition: 0.5s;
 }

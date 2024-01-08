@@ -35,3 +35,24 @@ const gsapAndScrollTrigger = () => {
 };
 
 gsapAndScrollTrigger();
+
+
+const fixed = document.querySelector('#fixed-image');
+
+const elemContainer = document.querySelector('.elem-container');
+
+elemContainer.addEventListener('mouseenter', () => {
+    fixed.style.display = 'block';
+});
+elemContainer.addEventListener('mouseleave', () => {
+    fixed.style.display = 'none';
+});
+
+const elems = document.querySelectorAll('.elem');
+
+elems.forEach((elem) => {
+    elem.addEventListener("mouseenter",() => {
+        let img = elem.getAttribute("data-image");
+    fixed.style.backgroundImage = `url(${img})`
+    })
+})
