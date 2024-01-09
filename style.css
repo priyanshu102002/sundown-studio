@@ -382,21 +382,16 @@ nav {
     transition: 0.5s;
 }
 
-.elem img{
-    width: 300px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    position: fixed;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%,-50%);
-    opacity: 0;
-    z-index: 999;
-    transition: all 0.5s ease-in-out;
+#page4{
+    width: 100%;
+    height: 60vh;
+    background-color: var(--background-color);
 }
 
-.elem:hover img{
-    opacity: 1;
-    transition: 0.5s;
+#page5{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
 }
+
