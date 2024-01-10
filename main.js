@@ -36,23 +36,29 @@ const gsapAndScrollTrigger = () => {
 
 gsapAndScrollTrigger();
 
+const fixed = document.querySelector("#fixed-image");
 
-const fixed = document.querySelector('#fixed-image');
+const elemContainer = document.querySelector(".elem-container");
 
-const elemContainer = document.querySelector('.elem-container');
-
-elemContainer.addEventListener('mouseenter', () => {
-    fixed.style.display = 'block';
+elemContainer.addEventListener("mouseenter", () => {
+    fixed.style.display = "block";
 });
-elemContainer.addEventListener('mouseleave', () => {
-    fixed.style.display = 'none';
+elemContainer.addEventListener("mouseleave", () => {
+    fixed.style.display = "none";
 });
 
-const elems = document.querySelectorAll('.elem');
+const elems = document.querySelectorAll(".elem");
 
 elems.forEach((elem) => {
-    elem.addEventListener("mouseenter",() => {
+    elem.addEventListener("mouseenter", () => {
         let img = elem.getAttribute("data-image");
-    fixed.style.backgroundImage = `url(${img})`
-    })
-})
+        fixed.style.backgroundImage = `url(${img})`;
+    });
+});
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 50,
+    
+});
