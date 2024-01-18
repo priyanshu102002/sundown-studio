@@ -60,5 +60,22 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     centeredSlides: true,
     spaceBetween: 50,
-    
+});
+
+const menuBtn = document.querySelector(".menu");
+const fullScr = document.querySelector("#full-scr");
+const navLogo = document.querySelector("nav img");
+let flag = 0;
+menuBtn.addEventListener("click", () => {
+    if (flag == 0) {
+        fullScr.style.top = "0";
+        navLogo.style.opacity = "0";
+        menuBtn.innerHTML = "Close"
+        flag = 1;
+    } else {
+        fullScr.style.top = "-100%";
+        navLogo.style.opacity = "100%";
+        menuBtn.innerHTML = "Menu"
+        flag = 0;
+    }
 });

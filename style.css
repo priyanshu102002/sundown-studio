@@ -60,6 +60,7 @@ body {
     background-color: var(--background-color);
     position: relative;
     padding: 0 3vw;
+    margin: 0;
 }
 
 nav {
@@ -69,6 +70,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: relative;
+    z-index: 9999;
+}
+
+.menu{
+    display: none;
+    
 }
 
 .nav-links {
@@ -227,6 +236,7 @@ nav {
     background-color: var(--background-color);
     padding: 8vw 0;
     position: relative;
+    margin: 0;
 }
 
 #circle {
@@ -348,6 +358,7 @@ nav {
     background-color: var(--background-color);
     padding: 8vw 0;
     z-index: -1;
+    margin: 0;
 }
 
 .elem {
@@ -392,6 +403,7 @@ nav {
     background-color: var(--background-color);
     padding: 0 2vw;
     padding-bottom: 20vw;
+    margin: 0;
 }
 
 .swiper {
@@ -429,6 +441,7 @@ nav {
     height: 100vh;
     background-color: transparent;
     pointer-events: none;
+    margin: 0;
 }
 
 #footer {
@@ -511,8 +524,144 @@ nav {
     font-weight: 100;
 }
 
+#full-scr{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.393);
+    z-index: 99;
+    top: -100%;
+    transition: all ease 0.4s;
+}
+
+.nav-div{
+    height: 55%;
+    width: 100%;
+    background-color: #efeae3;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    color: black;
+    padding-top: 18vh;
+    padding-right: 4vw ;
+}
+
+.nav-div h4{
+    font-size: 14vw;
+    font-weight: 100;
+    font-family: "Medium", sans-serif;
+    text-transform: uppercase;
+    text-align: right;
+
+}
+
 /* Mobile Responsive */
 
 @media (max-width: 600px) {
-    
+    #page1{
+        padding: 0 ;
+    }
+
+    nav {
+        padding: 7vw  5vw;
+        background-color: #efeae3;
+    }
+
+    nav img{
+        height: 9vh;
+        transition: all ease 0.3s;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu{
+        display: block;
+        padding: 3vw 5vw;
+        border: 2px solid var(--border-color);
+        font-size: 4vw;
+        font-weight: 200;
+        border-radius: 50px;
+        z-index: 999;
+    }
+
+    .center {
+        width: 100%;
+        height: 62vh;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 4vw;
+
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .left h3 {
+        font-size: 5.8vw;
+        width: 80%;
+        line-height: 5.8vw;
+    }
+
+    .right h1 {
+        font-size: 10vw;
+        line-height: 0.9;
+        font-family: "Medium", sans-serif;
+        text-align: right;
+    }
+
+    .hero-shape {
+        width: 46vw;
+        height: 36vw;
+
+        position: absolute;
+        right: 0;
+        top: 77vh;
+        filter: blur(20px);
+    }
+
+    #hero1 {
+        width: 100%;
+        height: 100%;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        background-color: var(--secondary-color);
+
+        position: absolute;
+    }
+
+    #hero2 {
+        width: 30vw;
+        height: 30vw;
+        border-radius: 50%;
+        background: linear-gradient(var(--secondary-color), #fe330a98);
+
+        position: absolute;
+
+        animation-name: anime2;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+    }
+
+    #hero3 {
+        width: 30vw;
+        height: 30vw;
+        border-radius: 50%;
+        background: linear-gradient(var(--secondary-color), #fe330a98);
+        filter: blur(10px);
+
+        position: absolute;
+
+        animation-name: anime1;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    .nav-div{
+        height: 45%;
+    }
 }
